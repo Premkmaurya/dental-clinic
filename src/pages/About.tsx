@@ -7,50 +7,50 @@ interface AboutProps {
 export default function About({ onOpenAppointmentModal }: AboutProps) {
   const doctors = [
     {
-      name: 'Dr. Ameet S. Dixit, BDS',
-      role: 'Founder & Principal Implantologist',
-      exp: '22+ Years of Experience',
-      education: 'AIIMS Hospital Resident | Univ of Miami & Univ of Toronto Alumni',
-      bio: 'A BDS Gold Medalist, Dr. Dixit completed his Implantology specializations from Miami and Toronto. Formerly a Resident Surgeon at the prestigious AIIMS Hospital, he has placed over 17,000+ successful dental implants using world-class Straumann systems.',
+      name: 'Nuestros Especialistas',
+      role: 'Cirujanos y Especialistas Dentales',
+      exp: 'Atención Integral',
+      education: 'Instituciones de élite a nivel mundial',
+      bio: 'En dental.Clinic, contamos con un equipo multidisciplinario de expertos. Cada tratamiento es realizado por un especialista certificado para garantizar resultados de calidad superior.',
       img: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400&h=500'
     },
     {
-      name: 'The Ark Dental Specialist Panel',
-      role: 'Associated Endodontists & Pediatric Experts',
-      exp: 'Meticulous Multi-disciplinary Care',
-      education: 'Elite global dental universities',
-      bio: 'To maintain the highest quality of dentistry, Ark Dental partners with elite consultancies across South Delhi. Our clinical panel incorporates expert orthodontists (Invisalign certified), endodontists for veneers, and pedodontists.',
+      name: 'El Equipo dental.Clinic',
+      role: 'Ortodoncistas y Endodoncistas Asociados',
+      exp: 'Cuidado Multidisciplinario Meticuloso',
+      education: 'Universidades dentales reconocidas',
+      bio: 'Para mantener la más alta calidad en odontología, nos asociamos con los mejores profesionales en Tijuana. Nuestro panel incluye ortodoncistas expertos, endodoncistas y especialistas en estética dental.',
       img: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400&h=500'
     }
   ];
 
   const values = [
     {
-      title: 'Trust-First Integrity',
-      desc: 'We never over-prescribe. Every single care path is backed by high-resolution clinical imaging, microscopes, and clear peer evidence.',
+      title: 'Integridad y Confianza',
+      desc: 'Nunca prescribimos de más. Cada plan de tratamiento está respaldado por imágenes clínicas de alta resolución y evidencia profesional clara.',
       icon: ShieldCheck
     },
     {
-      title: 'Microsurgical Precision',
-      desc: 'Our clinicians operate under active surgical magnification to ensure we preserve maximal natural tooth enamel and biological tissue.',
+      title: 'Precisión Microquirúrgica',
+      desc: 'Operamos bajo magnificación para asegurar la máxima preservación del esmalte natural del diente y el tejido biológico.',
       icon: Sparkles
     },
     {
-      title: 'Absolute Comfort',
-      desc: 'From quiet electronic drills and warm neck wraps to conscious sedation options, we customize each visit around physical relaxation.',
+      title: 'Comodidad Absoluta',
+      desc: 'Desde instrumentos silenciosos hasta opciones de sedación consciente, personalizamos cada visita para tu relajación física.',
       icon: HeartHandshake
     },
     {
-      title: 'Absolute Transparency',
-      desc: 'No hidden fees. Detailed dental designs and all associated laboratory costs are shared, analyzed, and approved by you upfront.',
+      title: 'Transparencia Total',
+      desc: 'Sin tarifas ocultas. Los diseños dentales y los costos asociados se comparten, analizan y aprueban contigo por adelantado.',
       icon: Eye
     }
   ];
 
   const environmentImages = [
-    { title: 'The Wellness Lounge', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600' },
-    { title: 'Advanced Surgical Suite', img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600' },
-    { title: 'Consultation Atelier', img: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600' }
+    { title: 'Sala de Bienestar', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600' },
+    { title: 'Suite Quirúrgica Avanzada', img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=600' },
+    { title: 'Estudio de Consultas', img: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=600' }
   ];
 
   return (
@@ -58,17 +58,17 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
       {/* 1. Minimalist Editorial Hero */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-24 text-center">
         <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold block mb-6 animate-fade-rise">
-          Our Atelier & Philosophy
+          Nuestra Filosofía
         </span>
         <h1 
           className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-5xl mx-auto font-normal text-foreground animate-fade-rise"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
-          Modern dentistry, <br />
-          <em className="text-muted-foreground not-italic">human care.</em>
+          Odontología moderna, <br />
+          <em className="text-muted-foreground not-italic">atención humana.</em>
         </h1>
         <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto leading-relaxed mt-8 animate-fade-rise-delay font-light">
-          We believe visiting the dentist should feel like stepping into a peaceful sanctuary. Ark Dental Clinic is designed entirely around sensory comfort, clinical artistry, and absolute diagnostic honesty.
+          Creemos que visitar al dentista debe sentirse como entrar a un santuario de paz. dental.Clinic está diseñada en torno a la comodidad sensorial, el arte clínico y la honestidad absoluta.
         </p>
       </section>
 
@@ -76,19 +76,19 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
       <section className="bg-secondary/15 py-32 border-y border-border/40">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold block">The Ark Dental Story</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold block">La Historia de dental.Clinic</span>
             <h2 className="text-3xl sm:text-5xl font-normal text-foreground leading-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              Crafting a Calming <br />Standard of Health
+              Creando un Estándar <br />de Salud Relajante
             </h2>
             <div className="text-sm sm:text-base text-muted-foreground space-y-4 font-light leading-relaxed">
               <p>
-                Founded by BDS Gold Medalist and former AIIMS Resident Doctor, Dr. Ameet S. Dixit, Ark Dental Clinic was created as an antidote to the rushed, clinical, and sometimes scary nature of traditional high-volume dentist practices.
+                dental.Clinic fue creada como un antídoto a la naturaleza apresurada y clínica de las prácticas dentales tradicionales de alto volumen.
               </p>
               <p>
-                Dr. Dixit envisioned a clinical space where South Delhi patients are treated with world-class hospitality. By integrating advanced computer-aided design (CAD/CAM) workflows, warm active acoustics, and Straumann premium implant systems, we have turned complex oral healthcare into a deeply comforting restorative experience.
+                Nuestra visión es ofrecer un espacio clínico en Tijuana donde los pacientes sean tratados con la mejor hospitalidad. Al integrar flujos de trabajo avanzados, acústica cálida y sistemas de implantes premium, hemos transformado el cuidado bucal en una experiencia profundamente reconfortante.
               </p>
               <p>
-                At Ark Dental Clinic, we do not simply restore teeth; we elevate your systemic health, confidence, and peace of mind. Every dental design is crafted with deep reverence for natural anatomical form.
+                En dental.Clinic no solo restauramos dientes; elevamos tu salud, confianza y tranquilidad mental. Cada diseño dental se elabora con una profunda reverencia por la forma anatómica natural.
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-border bg-[#0b0e14]">
             <img 
               src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" 
-              alt="Luxury Clinic Interior"
+              alt="Interior de Clínica de Lujo"
               className="w-full h-full object-cover grayscale opacity-80 hover:opacity-100 hover:scale-102 transition-all duration-700" 
             />
           </div>
@@ -107,12 +107,12 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
       {/* 3. Core Values Grid */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-b border-border/40">
         <div className="text-center max-w-xl mx-auto mb-20 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Our DNA</span>
+          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Nuestro ADN</span>
           <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            The Pillars of Our Care
+            Los Pilares de Nuestro Cuidado
           </h2>
           <p className="text-sm text-muted-foreground font-light leading-relaxed">
-            These guiding values define every consultation, diagnostic scan, and custom restoration we perform.
+            Estos valores definen cada consulta, diagnóstico y restauración que realizamos.
           </p>
         </div>
 
@@ -141,13 +141,13 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6">
             <div className="space-y-4">
-              <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold font-mono">Expert Clinicians</span>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold font-mono">Especialistas</span>
               <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                Our Medical Directors
+                Directores Médicos
               </h2>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm font-light leading-relaxed">
-              Meet the specialists leading our medical operations, bringing unparalleled global training and aesthetic mastery directly to your care.
+              Conoce a los especialistas que lideran nuestras operaciones, aportando entrenamiento de clase mundial y maestría estética.
             </p>
           </div>
 
@@ -183,8 +183,8 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
                   </p>
 
                   <div className="border-t border-border/30 pt-4 flex gap-2">
-                    <span className="text-[10px] bg-white/5 border border-white/10 text-foreground px-2.5 py-1 rounded-full">Aesthetic Dentistry</span>
-                    <span className="text-[10px] bg-white/5 border border-white/10 text-foreground px-2.5 py-1 rounded-full">ADA Accredited</span>
+                    <span className="text-[10px] bg-white/5 border border-white/10 text-foreground px-2.5 py-1 rounded-full">Odontología Estética</span>
+                    <span className="text-[10px] bg-white/5 border border-white/10 text-foreground px-2.5 py-1 rounded-full">Certificados</span>
                   </div>
                 </div>
               </div>
@@ -196,12 +196,12 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
       {/* 5. Elegant Clinic Environment Gallery */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 py-32">
         <div className="text-center max-w-xl mx-auto mb-20 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">The Sanctuary</span>
+          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">El Santuario</span>
           <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            The Dental Atelier Environment
+            Ambiente Clínico
           </h2>
           <p className="text-sm text-muted-foreground font-light leading-relaxed">
-            A quiet sanctuary structured with architectural geometry, gentle warm lighting, and private soundproof rooms to provide peaceful solace.
+            Un santuario tranquilo estructurado con geometría arquitectónica, luz cálida y habitaciones privadas insonorizadas.
           </p>
         </div>
 
@@ -232,7 +232,7 @@ export default function About({ onOpenAppointmentModal }: AboutProps) {
             onClick={onOpenAppointmentModal}
             className="rounded-full bg-white text-black px-8 py-3.5 text-sm font-semibold hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-lg inline-flex items-center gap-2"
           >
-            Schedule a Private Tour
+            Programa un Recorrido Privado
           </button>
         </div>
       </section>

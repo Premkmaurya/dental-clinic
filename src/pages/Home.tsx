@@ -20,7 +20,6 @@ interface HomeProps {
 
 export default function Home({ onOpenAppointmentModal }: HomeProps) {
 
-
   // Smooth scroll helper to top of next section
   const handleScrollDown = () => {
     const nextSection = document.getElementById('services-preview');
@@ -31,75 +30,75 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
 
   const services = [
     {
-      title: 'Cosmetic Dentistry',
-      desc: 'Masterfully crafted porcelain veneers and aesthetic bondings designed to enhance natural facial harmony.',
-      icon: Sparkles
-    },
-    {
-      title: 'Dental Implants',
-      desc: 'State-of-the-art titanium and ceramic reconstructions that restore natural biting force and dental anatomy.',
-      icon: Plus
-    },
-    {
-      title: 'Root Canal Treatment',
-      desc: 'Microscope-assisted endodontics focusing on conservative preservation of natural tooth structures, fully pain-free.',
+      title: 'Odontología General',
+      desc: 'Cuidado dental preventivo integral, limpiezas profundas y exámenes completos para mantener tu salud bucal en óptimas condiciones.',
       icon: ShieldCheck
     },
     {
-      title: 'Orthodontics & Braces',
-      desc: 'Modern aligners and low-profile ceramic braces designed for precision alignment with minimal life disruption.',
+      title: 'Ortodoncia',
+      desc: 'Alineadores modernos y brackets estéticos diseñados para lograr una alineación precisa con mínima interrupción en tu vida.',
       icon: Compass
     },
     {
-      title: 'Teeth Whitening',
-      desc: 'Advanced in-office dental bleaching combined with premium home treatments for a naturally brilliant luster.',
+      title: 'Implantes Dentales',
+      desc: 'Reconstrucciones avanzadas de titanio y cerámica que restauran la fuerza de masticación natural y la anatomía dental.',
+      icon: Plus
+    },
+    {
+      title: 'Blanqueamiento Dental',
+      desc: 'Tratamiento avanzado en consultorio combinado con opciones premium para el hogar, logrando un brillo naturalmente deslumbrante.',
       icon: Zap
     },
     {
-      title: 'Pediatric Dentistry',
-      desc: 'Gentle, comforting preventive care tailored for child development to foster positive dental relationships.',
+      title: 'Odontología Estética',
+      desc: 'Carillas de porcelana y uniones estéticas elaboradas magistralmente y diseñadas para mejorar la armonía facial natural.',
+      icon: Sparkles
+    },
+    {
+      title: 'Endodoncia',
+      desc: 'Tratamiento de conductos enfocado en preservar la estructura natural del diente, totalmente sin dolor y de la más alta calidad.',
       icon: Heart
     }
   ];
 
   const trustPillars = [
-    { title: 'Experienced Specialists', desc: 'Our clinicians hold elite credentials from top-tier dental institutions and engage in active international research.' },
-    { title: 'Modern Technology', desc: 'Utilizing 3D cone-beam computed tomography, digital oral scanners, and advanced surgical microscopes.' },
-    { title: 'Pain-Free Procedures', desc: 'Gentle local anesthesia techniques combined with optional conscious sedation protocols for a completely anxiety-free experience.' },
-    { title: 'Personalized Care', desc: 'We schedule extended reservation times to ensure your goals, comfort, and clinical details receive absolute attention.' },
-    { title: 'Comfortable Environment', desc: 'A calming clinical space resembling a luxury boutique spa, featuring active soundproofing and calming aromatherapy.' },
-    { title: 'Transparent Pricing', desc: 'Comprehensive digital treatment plans outlined in full detail prior to care, with direct insurance and finance options.' }
+    { title: 'Especialistas Experimentados', desc: 'Nuestros clínicos cuentan con credenciales de élite de las mejores instituciones dentales.' },
+    { title: 'Tecnología Moderna', desc: 'Utilizamos tomografía computarizada 3D, escáneres orales digitales y microscopios avanzados.' },
+    { title: 'Procedimientos Sin Dolor', desc: 'Técnicas de anestesia local suave para una experiencia completamente libre de ansiedad.' },
+    { title: 'Atención Personalizada', desc: 'Programamos tiempos extendidos de reserva para asegurar que tus objetivos y comodidad reciban atención absoluta.' },
+    { title: 'Ambiente Confortable', desc: 'Un espacio clínico relajante que se asemeja a un spa boutique de lujo, para tu mayor tranquilidad.' },
+    { title: 'Precios Transparentes', desc: 'Planes de tratamiento digitales completos y detallados presentados antes de iniciar el procedimiento.' }
   ];
 
   const testimonials = [
     {
-      name: 'Adeline Sterling',
-      role: 'Creative Director',
+      name: 'Sofía Álvarez',
+      role: 'Directora Creativa',
       rating: 5,
-      story: 'The care here is unlike any other medical office I have visited. The team treated my veneer transformation with the precision of fine artists. Truly a calming, luxury experience.',
+      story: 'La atención aquí no se compara con ningún otro consultorio que haya visitado. El equipo trató mi transformación con carillas con la precisión de verdaderos artistas. Una experiencia de lujo.',
       img: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200'
     },
     {
-      name: 'Marcus Sterling',
-      role: 'Investment Partner',
+      name: 'Carlos Mendoza',
+      role: 'Emprendedor',
       rating: 5,
-      story: 'My implant procedure was completely pain-free, fast, and handled with impeccable surgical precision. The clinical environment is stunningly serene, making visits genuinely pleasant.',
+      story: 'Mi procedimiento de implante fue rápido, sin dolor y manejado con una precisión impecable. El ambiente de la clínica es increíblemente sereno, haciendo que las visitas sean agradables.',
       img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200'
     },
     {
-      name: 'Elena Rostova',
-      role: 'Concert Violinist',
+      name: 'Elena Rodríguez',
+      role: 'Profesora',
       rating: 5,
-      story: 'As a performer, my smile is key. The teeth whitening and cosmetic alignment at Ark Dental completely elevated my confidence. The attention to detail is world-class.',
+      story: 'El blanqueamiento y la alineación estética en dental.Clinic elevaron completamente mi confianza. La atención al detalle que tienen aquí es de clase mundial.',
       img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200'
     }
   ];
 
   const galleryItems = [
-    { title: 'Aesthetic Restoration', category: 'Porcelain Veneers', img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=500' },
-    { title: 'Implant Reconstruction', category: 'Full Arch Restoration', img: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=500' },
-    { title: 'Smile Whitening', category: 'Laser Luster Treatment', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=500' },
-    { title: 'Precision Alignment', category: 'Clear Aligner System', img: 'https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=500' }
+    { title: 'Restauración Estética', category: 'Carillas de Porcelana', img: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=500' },
+    { title: 'Reconstrucción con Implantes', category: 'Arco Completo', img: 'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=500' },
+    { title: 'Blanqueamiento', category: 'Tratamiento Láser', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=500' },
+    { title: 'Alineación de Precisión', category: 'Alineadores Invisibles', img: 'https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=500' }
   ];
 
   return (
@@ -125,12 +124,12 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
             className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-6xl font-normal text-foreground animate-fade-rise"
             style={{ fontFamily: "'Instrument Serif', serif" }}
           >
-            Confident <em className="text-muted-foreground not-italic">smiles</em> begin with <br className="hidden sm:inline" />
-            exceptional <em className="text-muted-foreground not-italic">care.</em>
+            Sonrisas de <em className="text-muted-foreground not-italic">confianza</em> comienzan con <br className="hidden sm:inline" />
+            cuidado <em className="text-muted-foreground not-italic">excepcional.</em>
           </h1>
 
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl leading-relaxed mt-8 animate-fade-rise-delay font-light">
-            Premium dental care designed around comfort, precision, and confidence. From preventive checkups to smile transformations, we help you experience dentistry differently.
+            Atención dental premium diseñada en torno a la comodidad, precisión y confianza. Desde revisiones preventivas hasta transformaciones de sonrisa, te ayudamos a vivir la odontología de manera diferente.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-12 animate-fade-rise-delay-2 w-full sm:w-auto">
@@ -138,13 +137,13 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
               onClick={onOpenAppointmentModal}
               className="rounded-full bg-white text-black px-8 py-3.5 text-sm font-semibold hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-lg w-full sm:w-auto"
             >
-              Book Appointment
+              Agendar Cita
             </button>
             <Link
               to="/services"
               className="liquid-glass rounded-full px-8 py-3.5 text-sm text-foreground hover:scale-[1.03] transition-transform duration-200 cursor-pointer w-full sm:w-auto border border-white/10"
             >
-              Explore Services
+              Explorar Servicios
             </Link>
           </div>
         </div>
@@ -154,7 +153,7 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
           onClick={handleScrollDown}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-xs tracking-widest text-muted-foreground uppercase flex flex-col items-center gap-2 hover:text-foreground transition-colors cursor-pointer group"
         >
-          <span>Scroll Down</span>
+          <span>Desplazar</span>
           <span className="w-[1px] h-8 bg-muted-foreground/30 group-hover:h-12 transition-all duration-300 relative overflow-hidden">
             <span className="absolute top-0 left-0 w-full h-1/2 bg-white animate-[bounce_2s_infinite]" />
           </span>
@@ -165,13 +164,13 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
       <section id="services-preview" className="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-b border-border/40">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div className="space-y-4">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Signature Offerings</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Ofertas Exclusivas</span>
             <h2 className="text-4xl sm:text-5xl font-normal text-foreground leading-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              Clinical Excellence, <br />Artistic Precision
+              Excelencia Clínica, <br />Precisión Artística
             </h2>
           </div>
           <p className="text-sm text-muted-foreground max-w-sm font-light leading-relaxed">
-            We provide a comprehensive range of premium dental procedures custom-tailored to preserve your health, mechanics, and facial aesthetic.
+            Brindamos una gama completa de procedimientos dentales premium diseñados para preservar tu salud, mecánica y estética facial.
           </p>
         </div>
 
@@ -197,7 +196,7 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
                   to="/services" 
                   className="text-xs text-foreground font-semibold uppercase tracking-wider flex items-center gap-1.5 hover:gap-2.5 transition-all"
                 >
-                  Learn More <ArrowRight size={12} />
+                  Conocer Más <ArrowRight size={12} />
                 </Link>
               </div>
             );
@@ -209,7 +208,7 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
             to="/services"
             className="liquid-glass rounded-full px-8 py-3.5 text-sm text-foreground hover:scale-[1.02] transition-transform duration-200 inline-flex items-center gap-2 border border-white/10"
           >
-            View Our Full Catalog
+            Ver Catálogo Completo
           </Link>
         </div>
       </section>
@@ -218,12 +217,12 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
       <section className="bg-secondary/10 py-32 border-b border-border/40">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="max-w-3xl mb-20 space-y-4">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Our Philosophy</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Nuestra Filosofía</span>
             <h2 className="text-4xl sm:text-6xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              Redefining the Dental Experience
+              Redefiniendo la Experiencia Dental
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground font-light leading-relaxed pt-2">
-              Ark Dental Clinic was established with a singular mission: to strip away the sterile, anxiety-inducing traditional clinical model and replace it with bespoke wellness and meticulous patient attention.
+              dental.Clinic fue establecida con una misión singular: eliminar el modelo clínico tradicional que genera ansiedad y reemplazarlo con bienestar personalizado y atención meticulosa al paciente.
             </p>
           </div>
 
@@ -248,13 +247,13 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
       <section className="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-b border-border/40">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div className="space-y-4">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Transformations</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Transformaciones</span>
             <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              Signature Smile Gallery
+              Galería de Sonrisas
             </h2>
           </div>
           <p className="text-sm text-muted-foreground max-w-sm font-light leading-relaxed">
-            A curated display of actual clinical transformations showcasing the restorative art of Ark Dental. Subtle, organic, and beautifully life-like.
+            Una muestra de transformaciones clínicas reales que destacan el arte restaurativo de dental.Clinic. Sutil, orgánico y bellamente realista.
           </p>
         </div>
 
@@ -293,12 +292,12 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
       <section className="bg-[#0b0e14] py-32 border-b border-border/40">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-2xl mx-auto mb-20 space-y-4">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Client Journeys</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Experiencias de Clientes</span>
             <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              Shared Confidences
+              Confianzas Compartidas
             </h2>
             <p className="text-sm text-muted-foreground font-light leading-relaxed">
-              Read how our dedicated care and serene environment have completely reshaped how our patients perceive dental visits.
+              Lee cómo nuestra atención dedicada y ambiente sereno han reformado por completo la forma en que nuestros pacientes perciben las visitas al dentista.
             </p>
           </div>
 
@@ -340,7 +339,7 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
               to="/testimonials"
               className="text-sm text-foreground font-semibold uppercase tracking-wider flex items-center gap-1.5 hover:gap-2.5 transition-all justify-center"
             >
-              Read More Client Experiences <ArrowRight size={14} />
+              Leer Más Experiencias <ArrowRight size={14} />
             </Link>
           </div>
         </div>
@@ -350,16 +349,16 @@ export default function Home({ onOpenAppointmentModal }: HomeProps) {
       <section className="relative w-full overflow-hidden py-32 px-6 sm:px-8 text-center bg-secondary/20">
         <div className="max-w-4xl mx-auto space-y-8 relative z-10 flex flex-col items-center">
           <h2 className="text-4xl sm:text-7xl font-normal leading-tight text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Your healthiest smile starts today.
+            Tu sonrisa más saludable comienza hoy.
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground max-w-xl leading-relaxed font-light">
-            Indulge in absolute comfort, elite medical expertise, and transparent modern care. Register your private consult reservations online in under two minutes.
+            Disfruta de comodidad absoluta, experiencia médica de élite y cuidado moderno y transparente. Registra tu consulta privada en línea en menos de dos minutos.
           </p>
           <button
             onClick={onOpenAppointmentModal}
             className="rounded-full bg-white text-black px-8 py-3.5 text-sm font-semibold hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-lg w-full sm:w-auto mt-4"
           >
-            Book Appointment
+            Agendar Cita
           </button>
         </div>
       </section>

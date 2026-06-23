@@ -25,12 +25,12 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'Inicio', path: '/' },
+    { name: 'Nosotros', path: '/about' },
+    { name: 'Servicios', path: '/services' },
+    { name: 'Testimonios', path: '/testimonials' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Contact Us', path: '/contact' }
+    { name: 'Contacto', path: '/contact' }
   ];
 
   const isActive = (path: string) => {
@@ -51,10 +51,15 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-3xl font-normal tracking-tight text-foreground select-none cursor-pointer hover:opacity-90 transition-opacity"
-            style={{ fontFamily: "'Instrument Serif', serif" }}
+            className="flex items-center gap-3 select-none cursor-pointer hover:opacity-90 transition-opacity"
           >
-            Ark Dental®
+            <img src="/logo.png" alt="dental.Clinic Logo" className="h-10 w-10 object-cover rounded-full" />
+            <span 
+              className="text-3xl font-normal tracking-tight text-foreground hidden sm:block"
+              style={{ fontFamily: "'Instrument Serif', serif" }}
+            >
+              dental.Clinic
+            </span>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -75,13 +80,21 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            <a 
+              href="https://wa.me/526642088413" 
+              target="_blank" 
+              rel="noreferrer"
+              className="text-sm font-medium text-[#25D366] hover:opacity-80 transition-opacity"
+            >
+              WhatsApp
+            </a>
             <button
               onClick={onOpenAppointmentModal}
               className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-md inline-flex items-center gap-2"
             >
               <Calendar size={14} className="opacity-80" />
-              Book Appointment
+              Agendar Cita
             </button>
           </div>
 
@@ -123,7 +136,15 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
                 </Link>
               ))}
             </nav>
-            <div className="border-t border-border/40 pt-6">
+            <div className="border-t border-border/40 pt-6 flex flex-col gap-3">
+              <a 
+                href="https://wa.me/526642088413" 
+                target="_blank" 
+                rel="noreferrer"
+                className="w-full rounded-full bg-[#25D366] text-white text-center py-3.5 text-sm font-semibold hover:scale-[1.01] transition-transform duration-200 cursor-pointer"
+              >
+                WhatsApp
+              </a>
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
@@ -132,7 +153,7 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
                 className="w-full rounded-full bg-white text-black text-center py-3.5 text-sm font-semibold hover:scale-[1.01] transition-transform duration-200 cursor-pointer flex items-center justify-center gap-2"
               >
                 <Calendar size={14} />
-                Book Appointment
+                Agendar Cita
               </button>
             </div>
           </div>

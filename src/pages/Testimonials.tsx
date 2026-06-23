@@ -10,16 +10,16 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
 
   const videoTestimonials = [
     {
-      name: 'Victoria Sterling',
-      role: 'Classical Pianist',
-      title: 'A veneered transformation that feels completely weightless',
+      name: 'Victoria Sánchez',
+      role: 'Pianista Clásica',
+      title: 'Una transformación con carillas que se siente completamente natural',
       bgImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800',
       duration: '2:14'
     },
     {
-      name: 'Dr. Alistair Grant',
-      role: 'Professor of Surgery',
-      title: 'Clinical precision and absolute pain-free dental implants',
+      name: 'Dr. Alejandro Robles',
+      role: 'Profesor de Cirugía',
+      title: 'Precisión clínica e implantes dentales sin dolor absoluto',
       bgImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
       duration: '1:45'
     }
@@ -27,30 +27,30 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
 
   const smileStories = [
     {
-      title: 'Full Arch Restoration',
-      patient: 'Robert Kensington, Architect',
-      treatment: 'Guided Dental Implants & Ceramic Bridge',
-      challenge: 'Persistent bite misalignment, missing molars, and severe dental anxiety preventing standard clinical treatment.',
-      outcome: 'A gorgeous, fully functional arch built using state-of-the-art guided surgical implants. Completed in 2 visits under conscious oral sedation.',
-      quote: 'Ark Dental took my fears seriously. The guided digital surgery was fast, clean, and completely pain-free. I can chew, speak, and laugh with complete confidence again.',
+      title: 'Restauración de Arco Completo',
+      patient: 'Roberto K., Arquitecto',
+      treatment: 'Implantes Dentales Guiados y Puente Cerámico',
+      challenge: 'Desalineación persistente de la mordida, molares faltantes y ansiedad dental severa que impedía el tratamiento.',
+      outcome: 'Un arco hermoso y totalmente funcional construido con implantes quirúrgicos guiados. Completado en 2 visitas bajo sedación.',
+      quote: 'dental.Clinic tomó en serio mis miedos. La cirugía digital guiada fue rápida, limpia y completamente indolora. Puedo volver a reír con total confianza.',
       img: 'https://images.unsplash.com/photo-1579684389782-64d84b5e901d?auto=format&fit=crop&q=80&w=400'
     },
     {
-      title: 'Cosmetic Refinement',
-      patient: 'Elena Varela, Gallery Curator',
-      treatment: '8 Handcrafted Porcelain Veneers',
-      challenge: 'Discolored lateral incisors, fluorosis spotting, and minor overlapping that obscured her natural tooth proportions.',
-      outcome: 'Multi-layered feldspathic porcelain veneers layered by hand to match her facial geometry, offering high translucency and light refraction.',
-      quote: 'The doctors are absolute perfectionists. They designed my veneers to match my facial symmetry, keeping the texture life-like. People are amazed when I tell them they are not organic!',
+      title: 'Refinamiento Estético',
+      patient: 'Elena Varela, Curadora de Arte',
+      treatment: '8 Carillas de Porcelana Artesanales',
+      challenge: 'Incisivos laterales decolorados, manchas de fluorosis y leve superposición que oscurecían sus proporciones naturales.',
+      outcome: 'Carillas de porcelana multicapa diseñadas a mano para coincidir con su simetría facial, ofreciendo alta translucidez.',
+      quote: 'Los doctores son perfeccionistas. Diseñaron mis carillas para que coincidieran con mi simetría facial, manteniendo la textura. ¡La gente se asombra de lo naturales que se ven!',
       img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400'
     }
   ];
 
   const genericReviews = [
-    { name: 'Diana Sterling', role: 'Interior Architect', rating: 5, date: 'May 2026', content: 'The glassmorphic design and peaceful acoustic spacing immediately take away any clinical fear. The scaling and cleanings are incredibly gentle, and the concierge files all insurance claims immediately.' },
-    { name: 'Julian Vance', role: 'Creative Director', rating: 5, date: 'April 2026', content: 'Truly a wellness sanctuary. I fell asleep during my teeth whitening! The results are brilliant and completely natural. I highly recommend Dr. Sinclair to anyone seeking elite care.' },
-    { name: 'Dr. Timothy Vance', role: 'Cardiology Specialist', rating: 5, date: 'March 2026', content: 'As a fellow medical clinician, I am highly critical of sterilization and diagnostic equipment. Ark Dental operates at the absolute zenith of clinical safety, digital microscopy, and patient care.' },
-    { name: 'Audrey Sinclair', role: 'Author & Lecturer', rating: 5, date: 'January 2026', content: 'After years of orthodontic relapse, I received clear aligners here. The treatment plan was precise, easy to follow, and completed exactly on schedule. A world-class dental team.' }
+    { name: 'Diana R.', role: 'Arquitecta', rating: 5, date: 'Mayo 2026', content: 'El diseño de la clínica y el espacio acústico eliminan cualquier miedo. Las limpiezas son increíblemente suaves y me atendieron con mucha amabilidad.' },
+    { name: 'Julio V.', role: 'Director Creativo', rating: 5, date: 'Abril 2026', content: 'Verdaderamente un santuario de bienestar. ¡Me quedé dormido durante mi blanqueamiento! Los resultados son brillantes y completamente naturales.' },
+    { name: 'Dr. Tomás M.', role: 'Especialista', rating: 5, date: 'Marzo 2026', content: 'Como profesional médico, soy muy crítico con la esterilización y el equipo de diagnóstico. dental.Clinic opera en el más alto nivel de seguridad clínica.' },
+    { name: 'Andrea S.', role: 'Autora', rating: 5, date: 'Enero 2026', content: 'Después de años de problemas ortodónticos, recibí alineadores aquí. El plan de tratamiento fue preciso, fácil de seguir y se completó a tiempo. Un equipo de clase mundial.' }
   ];
 
   return (
@@ -58,17 +58,17 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
       {/* 1. Testimonials Hero */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-24 text-center">
         <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold block mb-6 animate-fade-rise">
-          Client Experiences
+          Experiencias de Clientes
         </span>
         <h1 
           className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-5xl mx-auto font-normal text-foreground animate-fade-rise"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
-          Stories of elevated <br />
-          <em className="text-muted-foreground not-italic">confidence.</em>
+          Historias de <br />
+          <em className="text-muted-foreground not-italic">confianza renovada.</em>
         </h1>
         <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto leading-relaxed mt-8 animate-fade-rise-delay font-light">
-          Read genuine case reviews, view video testimonies, and discover how our luxury clinic has completely transformed oral healthcare experiences for our clients.
+          Lee testimonios genuinos, mira casos en video y descubre cómo nuestra clínica ha transformado por completo las experiencias de atención dental.
         </p>
       </section>
 
@@ -76,12 +76,12 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
       <section className="bg-secondary/15 py-32 border-y border-border/40">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="max-w-xl mb-16 space-y-4">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Video Journals</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Videos Testimoniales</span>
             <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              In Their Own Words
+              En Sus Propias Palabras
             </h2>
             <p className="text-sm text-muted-foreground font-light leading-relaxed">
-              Click to play these quick video clips documenting the patient care moments, treatment schedules, and aesthetic transformations.
+              Haz clic para reproducir estos testimonios que documentan momentos de cuidado, procesos de tratamiento y transformaciones estéticas.
             </p>
           </div>
 
@@ -149,12 +149,12 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
       {/* 3. Restorative Smile Stories (Case Studies) */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 py-32 border-b border-border/40">
         <div className="text-center max-w-xl mx-auto mb-20 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Clinical Portfolios</span>
+          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Portafolio Clínico</span>
           <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Restorative Journeys
+            Viajes Restaurativos
           </h2>
           <p className="text-sm text-muted-foreground font-light leading-relaxed">
-            In-depth structural studies of aesthetic and biological restoration paths carried out in our surgical suites.
+            Estudios de casos detallados sobre nuestros procedimientos estéticos y restauraciones complejas.
           </p>
         </div>
 
@@ -177,31 +177,31 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
 
               {/* Case Notes */}
               <div className="w-full lg:w-[55%] space-y-6">
-                <span className="text-xs font-mono text-muted-foreground/60 block">Case Study // 0{i + 1}</span>
+                <span className="text-xs font-mono text-muted-foreground/60 block">Caso Clínico // 0{i + 1}</span>
                 <h3 className="text-3xl sm:text-4xl font-normal text-foreground leading-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
                   {story.title}
                 </h3>
 
                 <div className="space-y-4 text-sm sm:text-base font-light text-muted-foreground">
                   <div className="border-l-2 border-white/20 pl-4 space-y-1">
-                    <span className="text-xs text-foreground uppercase font-semibold">Patient Profiles</span>
+                    <span className="text-xs text-foreground uppercase font-semibold">Perfil del Paciente</span>
                     <p className="text-sm font-medium text-foreground">{story.patient}</p>
-                    <p className="text-xs italic">Treatment: {story.treatment}</p>
+                    <p className="text-xs italic">Tratamiento: {story.treatment}</p>
                   </div>
 
                   <div className="space-y-1.5 pt-2">
-                    <span className="text-xs text-foreground uppercase font-semibold block">Clinical Challenge</span>
+                    <span className="text-xs text-foreground uppercase font-semibold block">Desafío Clínico</span>
                     <p className="text-sm leading-relaxed">{story.challenge}</p>
                   </div>
 
                   <div className="space-y-1.5">
-                    <span className="text-xs text-foreground uppercase font-semibold block">The Restorative Outcome</span>
+                    <span className="text-xs text-foreground uppercase font-semibold block">El Resultado</span>
                     <p className="text-sm leading-relaxed">{story.outcome}</p>
                   </div>
                 </div>
 
                 <div className="liquid-glass rounded-2xl p-6 bg-secondary/15 border border-white/5 space-y-3">
-                  <span className="text-[10px] text-muted-foreground uppercase font-mono block">Patient Testimony</span>
+                  <span className="text-[10px] text-muted-foreground uppercase font-mono block">Testimonio del Paciente</span>
                   <p className="text-sm text-foreground italic font-light leading-relaxed">
                     "{story.quote}"
                   </p>
@@ -216,12 +216,12 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
       <section className="bg-secondary/10 py-32">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="text-center max-w-xl mx-auto mb-20 space-y-4">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Atelier Ledger</span>
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Nuestra Reputación</span>
             <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-              Client Journal Reviews
+              Reseñas de Clientes
             </h2>
             <p className="text-sm text-muted-foreground font-light leading-relaxed">
-              Candid testimonials submitted to our clinical atelier registry, emphasizing absolute clinical honesty and comfortable care.
+              Testimonios sinceros registrados por nuestros pacientes, destacando nuestra honestidad clínica y atención cómoda.
             </p>
           </div>
 
@@ -251,12 +251,12 @@ export default function Testimonials({ onOpenAppointmentModal }: TestimonialsPro
           </div>
 
           <div className="mt-20 text-center space-y-6">
-            <p className="text-xs text-muted-foreground">Experience dentistry designed entirely around you.</p>
+            <p className="text-xs text-muted-foreground">Experimenta la odontología diseñada completamente a tu alrededor.</p>
             <button
               onClick={onOpenAppointmentModal}
               className="rounded-full bg-white text-black px-8 py-3.5 text-sm font-semibold hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-lg inline-flex items-center gap-2"
             >
-              Request Consultation
+              Solicitar una Cita
             </button>
           </div>
         </div>

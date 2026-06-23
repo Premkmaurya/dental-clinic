@@ -14,75 +14,63 @@ export default function Services({ onOpenAppointmentModal }: ServicesProps) {
 
   const treatments = [
     {
-      title: 'General Dentistry & Prevention',
-      explanation: 'Advanced diagnostic screening, ultrasonic scaling, professional polishing, and high-strength aesthetic restorations.',
+      title: 'Odontología General',
+      explanation: 'Exámenes de diagnóstico avanzados, limpieza ultrasónica, pulido profesional y restauraciones estéticas de alta resistencia.',
       duration: '45 – 60 Mins',
-      benefits: ['Premium Tooth Colored Fillings', 'Deep Cleaning & Polishing', 'Custom Night Guards & Gummy Smile therapy'],
+      benefits: ['Resinas estéticas premium', 'Limpieza profunda y pulido', 'Guardas nocturnas personalizadas'],
     },
     {
-      title: 'Aesthetic Composite Bonding',
-      explanation: 'Artistic contouring and tooth-colored composite layers handcrafted to seamlessly correct gaps, chips, and alignment.',
-      duration: '1 Session',
-      benefits: ['Immediate aesthetic enhancements', 'Preserves natural tooth structure', 'Bespoke hand-sculpted design'],
+      title: 'Ortodoncia',
+      explanation: 'Alineación integral de los dientes utilizando alineadores transparentes de última generación y brackets estéticos de bajo perfil.',
+      duration: '6 – 18 Meses',
+      benefits: ['Terapia con alineadores invisibles', 'Brackets estéticos de cerámica', 'Alineación precisa y cómoda'],
     },
     {
-      title: 'Advanced Teeth Whitening',
-      explanation: 'Safe, premium clinical laser whitening coupled with custom take-home maintenance kits to dissolve deep stains.',
+      title: 'Implantes Dentales',
+      explanation: 'Sistemas de implantes líderes a nivel mundial. Colocación guiada de alta precisión para dientes individuales o prótesis sobre implantes.',
+      duration: '3 – 6 Meses',
+      benefits: ['Implantes de titanio premium', 'Reconstrucción ósea especializada', 'Recuperación de la fuerza de masticación'],
+    },
+    {
+      title: 'Blanqueamiento Dental',
+      explanation: 'Blanqueamiento láser clínico premium y seguro, combinado con kits de mantenimiento en casa para disolver manchas profundas.',
       duration: '60 Mins',
-      benefits: ['Up to 8 shades lighter in 1 visit', 'Enamel-safe desensitizing technology', 'Includes personalized touch-up kit'],
+      benefits: ['Resultados visibles en 1 visita', 'Tecnología desensibilizante segura', 'Incluye kit de retoque personalizado'],
     },
     {
-      title: 'Straumann® Dental Implants',
-      explanation: 'World-leading Swiss implant systems. High-precision guided placement for single teeth, All-on-4, or implant-supported dentures.',
-      duration: '3 – 6 Months',
-      benefits: ['Authorized Straumann® Partner', 'Dr. Ameet Dixit: 17,000+ Implants Placed', 'Surgical Bone Grafting integration'],
+      title: 'Odontología Estética',
+      explanation: 'Una combinación personalizada de carillas de porcelana, alineación y contorneado láser para un rejuvenecimiento estético.',
+      duration: '2 – 3 Semanas',
+      benefits: ['Diseño armonizado con el rostro', 'Revisión completa antes de la aplicación', 'Aumenta drásticamente la confianza'],
     },
     {
-      title: 'Zirconia Crowns & Bridges',
-      explanation: 'Ultra-durable, highly translucent custom crowns fabricated using advanced CAD/CAM technology to restore structural power.',
-      duration: '2 Sessions',
-      benefits: ['Metal-free premium Zirconia', 'Computer-designed perfect fit', 'Bridges to beautifully close gaps'],
-    },
-    {
-      title: 'Orthodontics & Invisalign®',
-      explanation: 'Comprehensive teeth alignment utilizing state-of-the-art clear Invisalign aligners, Damon self-ligating braces, or ceramic brackets.',
-      duration: '6 – 18 Months',
-      benefits: ['Invisalign® Clear Aligner therapy', 'Damon® Self-Ligating system', 'Low-profile ceramic aesthetic braces'],
-    },
-    {
-      title: 'Painless Extractions & Surgery',
-      explanation: 'Gentle, comfortable atraumatic extractions under specialized local anesthetics designed to maximize healing and safety.',
-      duration: '30 – 60 Mins',
-      benefits: ['100% painless computer anesthesia', 'Atraumatic bone-preserving techniques', 'Specialized clinical post-care protocols'],
-    },
-    {
-      title: 'Luxury Smile Makeovers',
-      explanation: 'A customized blend of porcelain veneers, alignment, and laser contouring for a fully personalized aesthetic rejuvenation.',
-      duration: '2 – 3 Weeks',
-      benefits: ['Bespoke face-harmonized design', 'Full mockup review prior to bonding', 'Drastically elevates social confidence']
+      title: 'Endodoncia',
+      explanation: 'Tratamientos de conducto cómodos y sin dolor, utilizando anestésicos modernos y herramientas endodónticas de alta precisión.',
+      duration: '60 – 90 Mins',
+      benefits: ['Totalmente sin dolor', 'Preservación del diente natural', 'Protocolos clínicos especializados']
     }
   ];
 
   const faqs = [
     {
-      q: 'Do you accept private dental insurance?',
-      a: 'Yes. Ark Dental Clinic GK-1 operates as an out-of-network concierge provider. We accept major insurances and our dedicated desk will assist in compiling all clinical files and claims on your behalf to maximize your reimbursement.'
+      q: '¿Aceptan seguros dentales?',
+      a: 'Sí. En dental.Clinic aceptamos la mayoría de los seguros dentales y nuestro personal te ayudará a procesar los reclamos para maximizar tus beneficios.'
     },
     {
-      q: 'What makes your cosmetic dentistry look natural?',
-      a: 'We avoid basic, flat-white hospital restorations. Our laboratory partners utilize multi-layered, highly translucent premium materials. Each restoration is hand-detailed with natural microscopic texturing and color gradients to reflect light exactly like organic enamel.'
+      q: '¿Qué hace que la odontología estética se vea natural?',
+      a: 'Evitamos restauraciones blancas y planas. Utilizamos materiales premium multicapa y altamente translúcidos. Cada restauración se detalla a mano con texturas microscópicas y gradientes de color naturales.'
     },
     {
-      q: 'Is the root canal procedure painful?',
-      a: 'Absolutely not. With modern advanced local anesthetics and highly precise endodontic tools, root canal treatments at Ark Dental are completely comfortable and virtually painless. Most patients experience no more sensation than a standard filling.'
+      q: '¿Es doloroso el tratamiento de endodoncia?',
+      a: 'Absolutamente no. Con los anestésicos locales modernos y herramientas de alta precisión, los tratamientos de conducto en dental.Clinic son completamente cómodos y prácticamente indoloros.'
     },
     {
-      q: 'How long do custom restorations and veneers last?',
-      a: 'When meticulously bonded and cared for with normal oral hygiene, custom dental veneers and restorations regularly last between 15 to 20 years. We offer comprehensive diagnostic checkups to monitor and preserve your long-term smile investment.'
+      q: '¿Cuánto duran las restauraciones y carillas?',
+      a: 'Con el cuidado adecuado y buena higiene bucal, las carillas y restauraciones personalizadas suelen durar entre 15 y 20 años. Ofrecemos revisiones para preservar tu sonrisa a largo plazo.'
     },
     {
-      q: 'How do I schedule an appointment with Dr. Ameet Dixit?',
-      a: 'You can easily request a consultation through our online appointment form, call our front desk at 011-41001313, or send a direct message on WhatsApp to +91 99905 09300. We will tailor a time that fits your schedule.'
+      q: '¿Cómo puedo agendar una cita?',
+      a: 'Puedes solicitar una consulta a través de nuestro formulario en línea o enviarnos un mensaje directo por WhatsApp al 664 208 8413. Encontraremos el horario que mejor se adapte a ti.'
     }
   ];
 
@@ -91,17 +79,17 @@ export default function Services({ onOpenAppointmentModal }: ServicesProps) {
       {/* 1. Services Hero */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-24 text-center">
         <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold block mb-6 animate-fade-rise">
-          Bespoke Treatments
+          Tratamientos a la Medida
         </span>
         <h1 
           className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-5xl mx-auto font-normal text-foreground animate-fade-rise"
           style={{ fontFamily: "'Instrument Serif', serif" }}
         >
-          Signature Dental <br />
-          <em className="text-muted-foreground not-italic">services.</em>
+          Servicios <br />
+          <em className="text-muted-foreground not-italic">exclusivos.</em>
         </h1>
         <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto leading-relaxed mt-8 animate-fade-rise-delay font-light">
-          A luxury menu of preventive, aesthetic, and surgical interventions. Built on high-end diagnostics, surgical magnification, and absolute comfort.
+          Un menú premium de intervenciones preventivas, estéticas y quirúrgicas. Basado en diagnósticos de alta tecnología y comodidad absoluta.
         </p>
       </section>
 
@@ -132,7 +120,7 @@ export default function Services({ onOpenAppointmentModal }: ServicesProps) {
 
                   {/* Benefits checklist */}
                   <div className="border-t border-border/30 pt-5 space-y-2.5">
-                    <span className="text-[10px] text-muted-foreground/60 uppercase font-mono block tracking-wider">Care Highlights</span>
+                    <span className="text-[10px] text-muted-foreground/60 uppercase font-mono block tracking-wider">Beneficios</span>
                     <ul className="space-y-2">
                       {t.benefits.map((b, i) => (
                         <li key={i} className="flex gap-2 items-start text-xs text-foreground font-light">
@@ -149,7 +137,7 @@ export default function Services({ onOpenAppointmentModal }: ServicesProps) {
                   onClick={onOpenAppointmentModal}
                   className="w-full mt-8 rounded-full border border-white/10 bg-white/5 py-3 text-xs font-semibold tracking-wider uppercase text-foreground hover:bg-white hover:text-black hover:scale-[1.01] transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 group"
                 >
-                  Book Inquiry 
+                  Agendar Consulta
                   <ArrowRight size={12} className="group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
@@ -161,12 +149,12 @@ export default function Services({ onOpenAppointmentModal }: ServicesProps) {
       {/* 3. General FAQs (Elegant Accordion) */}
       <section className="max-w-4xl mx-auto px-6 sm:px-8 py-32">
         <div className="text-center max-w-xl mx-auto mb-20 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Answers</span>
+          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Respuestas</span>
           <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Treatment Intelligence
+            Preguntas Frecuentes
           </h2>
           <p className="text-sm text-muted-foreground font-light leading-relaxed">
-            Quick, detailed answers regarding our financial files, bespoke restorative procedures, and clinical comfort protocols.
+            Respuestas detalladas sobre nuestros procedimientos, opciones financieras y protocolos de comodidad clínica.
           </p>
         </div>
 
@@ -202,12 +190,12 @@ export default function Services({ onOpenAppointmentModal }: ServicesProps) {
         </div>
 
         <div className="mt-20 text-center space-y-4">
-          <p className="text-xs text-muted-foreground">Have additional specific inquiries about a procedure?</p>
+          <p className="text-xs text-muted-foreground">¿Tienes dudas adicionales sobre algún procedimiento?</p>
           <button
             onClick={onOpenAppointmentModal}
             className="rounded-full bg-white text-black px-8 py-3.5 text-sm font-semibold hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-lg inline-flex items-center gap-2"
           >
-            Speak with our Concierge
+            Hablar con un Especialista
           </button>
         </div>
       </section>

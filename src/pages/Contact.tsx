@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageSquare, Compass, Send, CheckCircle2, MessageCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircle, PhoneCall, CheckCircle2 } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     fullName: '',
     phone: '',
     email: '',
-    treatment: 'Odontología General',
+    treatment: 'Specialist Consultation',
     date: '',
     message: ''
   });
@@ -30,7 +30,7 @@ export default function Contact() {
         fullName: '',
         phone: '',
         email: '',
-        treatment: 'Odontología General',
+        treatment: 'Specialist Consultation',
         date: '',
         message: ''
       });
@@ -41,139 +41,138 @@ export default function Contact() {
     <div className="relative w-full">
       {/* 1. Contact Hero */}
       <section className="max-w-7xl mx-auto px-6 sm:px-8 pt-32 pb-16 text-center">
-        <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold block mb-6 animate-fade-rise">
-          Conecta e Infórmate
+        <span className="text-primary font-semibold tracking-wider text-sm uppercase block mb-4 animate-fade-rise">
+          Connect With Us
         </span>
         <h1 
-          className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-5xl mx-auto font-normal text-foreground animate-fade-rise"
-          style={{ fontFamily: "'Instrument Serif', serif" }}
+          className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight max-w-5xl mx-auto text-foreground animate-fade-rise"
         >
-          Déjanos ayudarte a <br />
-          <em className="text-muted-foreground not-italic">vivir la odontología de otra manera.</em>
+          Your Health is Our <br />
+          <span className="text-primary">Priority</span>
         </h1>
-        <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto leading-relaxed mt-8 animate-fade-rise-delay font-light">
-          ¿Tienes una consulta o inquietud dental? Completa nuestro formulario, llámanos directamente o comunícate vía WhatsApp.
+        <p className="text-muted-foreground text-sm sm:text-xl max-w-2xl mx-auto leading-relaxed mt-6 animate-fade-rise-delay font-light">
+          Have an inquiry, need a consultation, or managing a chronic condition? Complete our form, call us directly, or chat via WhatsApp.
         </p>
       </section>
 
       {/* 2. Main Contact Columns */}
-      <section className="bg-secondary/10 py-32 border-y border-border/40">
+      <section className="bg-secondary/30 py-24 border-y border-border/40">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           
           {/* Column A: Custom Consult Form */}
-          <div className="liquid-glass rounded-3xl border border-white/5 bg-secondary/30 p-8 sm:p-10 shadow-xl space-y-6">
+          <div className="bg-white rounded-3xl border border-border/60 p-8 sm:p-10 shadow-xl space-y-6">
             <div>
-              <h2 className="text-3xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                Solicitud de Consulta
+              <h2 className="text-3xl font-bold text-foreground">
+                Appointment Request
               </h2>
-              <p className="text-xs text-muted-foreground mt-1">
-                Comparte tus objetivos y programaremos tu cita.
+              <p className="text-sm text-muted-foreground mt-2">
+                Share your timeline and we will secure your appointment.
               </p>
             </div>
 
             {isSuccess ? (
               <div className="flex flex-col items-center justify-center py-12 text-center animate-fade-rise">
-                <div className="mb-4 rounded-full bg-emerald-500/10 p-4 text-emerald-400">
-                  <CheckCircle2 size={44} className="stroke-[1.5]" />
+                <div className="mb-4 rounded-full bg-emerald-500/10 p-4 text-emerald-500">
+                  <CheckCircle2 size={44} className="stroke-[2]" />
                 </div>
-                <h4 className="text-xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                  Solicitud Registrada
+                <h4 className="text-xl font-bold text-foreground">
+                  Inquiry Logged Successfully
                 </h4>
-                <p className="text-xs sm:text-sm text-muted-foreground max-w-xs mt-2 leading-relaxed font-light">
-                  Gracias. Tu solicitud ha sido enviada. Nuestro coordinador se pondrá en contacto contigo muy pronto.
+                <p className="text-sm text-muted-foreground max-w-xs mt-2 leading-relaxed">
+                  Thank you. Your request is registered with Suraksha Multispeciality Clinic. Our coordinator will contact you shortly.
                 </p>
                 <button
                   onClick={() => setIsSuccess(false)}
-                  className="mt-6 rounded-full border border-border bg-white/5 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:bg-white/10 transition-colors cursor-pointer"
+                  className="mt-6 rounded-full border border-border bg-secondary px-6 py-2.5 text-sm font-semibold text-foreground hover:bg-border transition-colors cursor-pointer"
                 >
-                  Enviar Otra Solicitud
+                  Submit Another Form
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Full Name */}
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">Nombre Completo</label>
+                <div className="space-y-1.5">
+                  <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Full Name</label>
                   <input
                     required
                     type="text"
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    placeholder="Ej. Roberto Sánchez"
-                    className="w-full rounded-xl border border-border bg-black/15 px-4 py-3 text-sm text-foreground placeholder-muted-foreground/30 focus:border-white/40 focus:outline-none transition-colors"
+                    placeholder="e.g. Rahul Sharma"
+                    className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors"
                   />
                 </div>
 
                 {/* Phone & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">Número de Teléfono</label>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Phone Number</label>
                     <input
                       required
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="664 208 8413"
-                      className="w-full rounded-xl border border-border bg-black/15 px-4 py-3 text-sm text-foreground placeholder-muted-foreground/30 focus:border-white/40 focus:outline-none transition-colors"
+                      placeholder="+91 81052 00448"
+                      className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors"
                     />
                   </div>
-                  <div className="space-y-1">
-                    <label className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">Correo Electrónico</label>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Email Address</label>
                     <input
                       required
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="roberto@ejemplo.com"
-                      className="w-full rounded-xl border border-border bg-black/15 px-4 py-3 text-sm text-foreground placeholder-muted-foreground/30 focus:border-white/40 focus:outline-none transition-colors"
+                      placeholder="rahul@example.com"
+                      className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
 
                 {/* Treatment & Preferred Date */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">Tratamiento</label>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Service Required</label>
                     <select
                       name="treatment"
                       value={formData.treatment}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-border bg-[#101319] px-4 py-3 text-sm text-foreground focus:border-white/40 focus:outline-none transition-colors appearance-none"
+                      className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors appearance-none"
                     >
-                      <option value="Odontología General">Odontología General</option>
-                      <option value="Ortodoncia">Ortodoncia</option>
-                      <option value="Implantes Dentales">Implantes Dentales</option>
-                      <option value="Blanqueamiento Dental">Blanqueamiento Dental</option>
-                      <option value="Odontología Estética">Odontología Estética</option>
-                      <option value="Endodoncia">Endodoncia</option>
+                      <option value="Specialist Consultation">Specialist Consultation</option>
+                      <option value="Diabetes Management">Diabetes Management</option>
+                      <option value="Hypertension Care">Hypertension Care</option>
+                      <option value="Thyroid Care">Thyroid Care</option>
+                      <option value="Laboratory Services">Laboratory Services</option>
+                      <option value="Day Care Services">Day Care Services</option>
                     </select>
                   </div>
-                  <div className="space-y-1">
-                    <label className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">Fecha Preferida</label>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Preferred Date</label>
                     <input
                       required
                       type="date"
                       name="date"
                       value={formData.date}
                       onChange={handleChange}
-                      className="w-full rounded-xl border border-border bg-black/15 px-4 py-3 text-sm text-foreground focus:border-white/40 focus:outline-none transition-colors"
+                      className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors"
                     />
                   </div>
                 </div>
 
                 {/* Message */}
-                <div className="space-y-1">
-                  <label className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground">Tu Mensaje</label>
+                <div className="space-y-1.5">
+                  <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Your Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    placeholder="Describe tus síntomas, objetivos o preferencias de horario..."
-                    className="w-full rounded-xl border border-border bg-black/15 px-4 py-3 text-sm text-foreground placeholder-muted-foreground/30 focus:border-white/40 focus:outline-none transition-colors resize-none"
+                    rows={3}
+                    placeholder="Describe your current symptoms or scheduling preferences..."
+                    className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors resize-none"
                   />
                 </div>
 
@@ -181,9 +180,9 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full mt-4 rounded-full bg-white text-black py-4 text-xs font-semibold tracking-wider uppercase hover:scale-[1.01] transition-transform duration-200 cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="w-full mt-4 rounded-full bg-primary text-primary-foreground py-4 text-sm font-bold hover:bg-primary/90 transition-all duration-200 cursor-pointer disabled:opacity-50 flex items-center justify-center shadow-lg"
                 >
-                  {isSubmitting ? 'Registrando Consulta...' : 'Agendar Cita'}
+                  {isSubmitting ? 'Registering...' : 'Request Appointment'}
                 </button>
               </form>
             )}
@@ -194,81 +193,81 @@ export default function Contact() {
             
             {/* Clinic details */}
             <div className="space-y-6">
-              <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Atención al Paciente</span>
-              <h3 className="text-3xl font-normal text-foreground leading-tight" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                dental.Clinic Sede
+              <span className="text-primary font-semibold tracking-wider text-sm uppercase">Contact Details</span>
+              <h3 className="text-4xl font-bold text-foreground leading-tight">
+                Suraksha Multispeciality Clinic
               </h3>
               
-              <div className="space-y-5 text-sm sm:text-base font-light text-muted-foreground">
+              <div className="space-y-6 text-base text-muted-foreground">
                 <div className="flex gap-4 items-start">
-                  <MapPin size={18} className="text-white shrink-0 mt-1" />
+                  <MapPin size={20} className="text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs text-foreground uppercase font-semibold block mb-1">Ubicación</span>
-                    <p>Tijuana, Baja California,<br />Mexico</p>
+                    <span className="font-semibold text-foreground block mb-1">Our Location</span>
+                    <p>2nd Cross Rd, Arekere,<br />Bengaluru, Karnataka, India</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <Phone size={18} className="text-white shrink-0 mt-1" />
+                  <Phone size={20} className="text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs text-foreground uppercase font-semibold block mb-1">Teléfonos</span>
-                    <p className="font-medium text-foreground">664 208 8413</p>
+                    <span className="font-semibold text-foreground block mb-1">Phone Number</span>
+                    <p className="font-medium text-foreground">+91 81052 00448</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <Mail size={18} className="text-white shrink-0 mt-1" />
+                  <Mail size={20} className="text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs text-foreground uppercase font-semibold block mb-1">Correo</span>
-                    <p className="font-medium text-foreground font-sans">contacto@dental.clinic</p>
+                    <span className="font-semibold text-foreground block mb-1">Email Address</span>
+                    <p className="font-medium text-foreground">info.surakshaclinic@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 items-start">
-                  <Clock size={18} className="text-white shrink-0 mt-1" />
+                  <Clock size={20} className="text-primary shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs text-foreground uppercase font-semibold block mb-1">Horario</span>
-                    <p>Lun – Sab: 09:00 – 19:00</p>
-                    <p>Dom: 10:00 – 15:00</p>
-                    <p className="italic text-xs font-semibold text-white mt-0.5">Emergencias 24/7 Disponible</p>
+                    <span className="font-semibold text-foreground block mb-1">Clinic Hours</span>
+                    <p>Monday – Sunday: 8:00 AM – 10:00 PM</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* WhatsApp & Instant CTAs */}
-            <div className="border-t border-border/40 pt-10 space-y-4">
-              <span className="text-[10px] uppercase tracking-wider text-muted-foreground font-mono block">Canales Directos</span>
+            <div className="border-t border-border/60 pt-10 space-y-4">
+              <span className="text-primary font-semibold tracking-wider text-sm uppercase block mb-4">Direct Channels</span>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* WhatsApp Link */}
+                
+                {/* Call Link */}
                 <a
-                  href="https://wa.me/526642088413"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="liquid-glass rounded-xl border border-white/5 bg-[#128c7e]/10 p-5 hover:bg-[#128c7e]/20 transition-all duration-300 flex items-center gap-4 cursor-pointer"
+                  href="tel:+918105200448"
+                  className="bg-white rounded-xl border border-border/60 p-5 hover:shadow-lg transition-all duration-300 flex items-center gap-4 cursor-pointer"
                 >
-                  <span className="rounded-full bg-[#25d366]/10 p-3 text-[#25d366]">
-                    <MessageCircle size={20} className="fill-current" />
+                  <span className="rounded-full bg-primary/10 p-3 text-primary">
+                    <PhoneCall size={20} />
                   </span>
                   <div>
-                    <h4 className="text-sm font-semibold text-foreground">WhatsApp</h4>
-                    <p className="text-xs text-muted-foreground">Asistencia en vivo</p>
+                    <h4 className="text-sm font-bold text-foreground">Call Clinic</h4>
+                    <p className="text-xs text-muted-foreground">Speak to our reception</p>
                   </div>
                 </a>
 
-                {/* Instant Chat Trigger */}
-                <button
-                  onClick={() => alert("Conectando con un especialista... por favor espere.")}
-                  className="liquid-glass text-left rounded-xl border border-white/5 bg-white/5 p-5 hover:bg-white/10 transition-all duration-300 flex items-center gap-4 cursor-pointer"
+                {/* WhatsApp Link */}
+                <a
+                  href="https://wa.me/918105200448"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#25D366]/10 rounded-xl border border-[#25D366]/20 p-5 hover:bg-[#25D366]/20 transition-all duration-300 flex items-center gap-4 cursor-pointer"
                 >
-                  <span className="rounded-full bg-white/5 p-3 text-white">
-                    <MessageSquare size={20} />
+                  <span className="rounded-full bg-[#25D366] p-3 text-white">
+                    <MessageCircle size={20} />
                   </span>
                   <div>
-                    <h4 className="text-sm font-semibold text-foreground">Chat en Línea</h4>
-                    <p className="text-xs text-muted-foreground">Portal web estándar</p>
+                    <h4 className="text-sm font-bold text-foreground">WhatsApp Us</h4>
+                    <p className="text-xs text-muted-foreground">Fastest response time</p>
                   </div>
-                </button>
+                </a>
+
               </div>
             </div>
 
@@ -277,58 +276,30 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* 3. Artistic Styled Premium Map Showcase */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 py-32 text-center">
+      {/* 3. Map Showcase */}
+      <section className="max-w-7xl mx-auto px-6 sm:px-8 py-24 text-center">
         <div className="text-center max-w-xl mx-auto mb-16 space-y-4">
-          <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Ubicación</span>
-          <h2 className="text-4xl sm:text-5xl font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-            Nuestra Clínica
+          <span className="text-primary font-semibold tracking-wider text-sm uppercase">Find Us</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+            Visit the Clinic
           </h2>
-          <p className="text-sm text-muted-foreground font-light leading-relaxed">
-            Convenientemente ubicados en Tijuana, Baja California, ofreciendo cuidado dental de primer nivel.
+          <p className="text-muted-foreground text-lg">
+            Located conveniently in Arekere, Bengaluru to serve the community.
           </p>
         </div>
 
-        {/* Custom Premium SVG Vector Map Panel */}
-        <div className="relative aspect-[21/9] w-full rounded-3xl overflow-hidden border border-border bg-[#0b0f16] flex items-center justify-center p-6 group">
-          {/* Artistic SVG background grid representing city grid layout */}
-          <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none stroke-white stroke-[0.5]" fill="none">
-            <defs>
-              <pattern id="cityGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#cityGrid)" />
-            <path d="M-100,200 C300,50 800,450 1400,100" strokeWidth="2" />
-            <path d="M100,-100 C400,600 600,-200 900,600" strokeWidth="1.5" />
-            <path d="M400,500 L1200,-100" strokeWidth="1" />
-          </svg>
-
-          {/* Compass Graphic */}
-          <div className="absolute bottom-6 left-6 text-muted-foreground/30 flex items-center gap-2 font-mono text-[9px] uppercase tracking-wider">
-            <Compass size={16} /> Tijuana, B.C., México
-          </div>
-
-          {/* Stylized Pin Marker Card */}
-          <div className="relative z-10 liquid-glass rounded-2xl border border-white/10 bg-background/80 p-6 max-w-xs text-center shadow-2xl space-y-4 backdrop-blur-md animate-fade-rise">
-            <div className="mx-auto rounded-full bg-white text-black p-3 w-fit">
-              <MapPin size={22} className="stroke-[2.5]" />
-            </div>
-            <div>
-              <h4 className="text-lg font-normal text-foreground" style={{ fontFamily: "'Instrument Serif', serif" }}>
-                dental.Clinic
-              </h4>
-              <p className="text-[11px] text-muted-foreground mt-1">Tijuana, Baja California, Mexico</p>
-            </div>
-            <a 
-              href="https://maps.google.com/?q=Tijuana,+Baja+California,+Mexico"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-foreground font-semibold uppercase tracking-wider hover:gap-2.5 transition-all"
-            >
-              Abrir en Google Maps <Send size={10} />
-            </a>
-          </div>
+        {/* Google Maps Placeholder via Embed iframe */}
+        <div className="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border border-border">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.760163359648!2d77.5959556!3d12.8954751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae152f204ba5eb%3A0x89fcddb621e7d3a0!2sArekere%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={true} 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Suraksha Multispeciality Clinic Map"
+          ></iframe>
         </div>
       </section>
     </div>

@@ -3,20 +3,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: 201 100% 13%;
-  --foreground: 0 0% 100%;
+  --background: 0 0% 100%;
+  --foreground: 220 15% 20%;
 
-  --muted-foreground: 220 8% 72%;
+  --muted-foreground: 220 8% 40%;
 
-  --primary: 0 0% 100%;
-  --primary-foreground: 0 0% 6%;
+  --primary: 185 80% 35%; /* Teal/Medical Blue */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 15% 16%;
-  --muted: 210 15% 16%;
-  --accent: 210 15% 16%;
+  --secondary: 210 20% 96%;
+  --muted: 210 20% 96%;
+  --accent: 185 80% 35%;
 
-  --border: 0 0% 18%;
-  --input: 0 0% 18%;
+  --border: 220 10% 90%;
+  --input: 220 10% 90%;
   
   --font-display: 'Instrument Serif', serif;
   --font-body: 'Inter', sans-serif;
@@ -48,39 +48,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Liquid Glass Effect */
+/* Custom Clean Card Effect (Replaces Liquid Glass) */
 .liquid-glass {
-  background: rgba(255, 255, 255, 0.01);
-  background-blend-mode: luminosity;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: none;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   position: relative;
   overflow: hidden;
-}
-
-.liquid-glass::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  border-radius: inherit;
-  padding: 1.4px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.45) 0%,
-    rgba(255, 255, 255, 0.15) 20%,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0.15) 80%,
-    rgba(255, 255, 255, 0.45) 100%
-  );
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
 }
 
 /* Animations */

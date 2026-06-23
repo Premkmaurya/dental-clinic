@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Calendar } from 'lucide-react';
+import { Menu, X, Calendar, Activity } from 'lucide-react';
 
 interface NavbarProps {
   onOpenAppointmentModal: () => void;
@@ -25,12 +25,11 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', path: '/' },
-    { name: 'Nosotros', path: '/about' },
-    { name: 'Servicios', path: '/services' },
-    { name: 'Testimonios', path: '/testimonials' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contacto', path: '/contact' }
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const isActive = (path: string) => {
@@ -44,7 +43,7 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
     <>
       <header className={`sticky top-0 z-40 w-full transition-all duration-300 ${
         isScrolled 
-          ? 'border-b border-white/5 bg-background/20 backdrop-blur-md shadow-lg' 
+          ? 'border-b border-border/10 bg-white/80 backdrop-blur-md shadow-sm' 
           : 'border-b border-transparent bg-transparent backdrop-blur-none'
       }`}>
         <div className="max-w-7xl mx-auto px-6 sm:px-8 py-5 flex justify-between items-center">
@@ -53,13 +52,19 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
             to="/" 
             className="flex items-center gap-3 select-none cursor-pointer hover:opacity-90 transition-opacity"
           >
-            <img src="/logo.png" alt="dental.Clinic Logo" className="h-10 w-10 object-cover rounded-full" />
-            <span 
-              className="text-3xl font-normal tracking-tight text-foreground hidden sm:block"
-              style={{ fontFamily: "'Instrument Serif', serif" }}
-            >
-              dental.Clinic
-            </span>
+            <div className="bg-primary/10 p-2 rounded-xl text-primary">
+              <Activity size={24} />
+            </div>
+            <div className="flex flex-col">
+              <span 
+                className="text-xl sm:text-2xl font-semibold tracking-tight text-foreground leading-none"
+              >
+                Suraksha
+              </span>
+              <span className="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-wider font-medium">
+                Multispeciality Clinic
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -70,7 +75,7 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
                 to={link.path}
                 className={`text-sm tracking-wide transition-colors ${
                   isActive(link.path)
-                    ? 'text-foreground font-medium'
+                    ? 'text-primary font-semibold'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -82,7 +87,7 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
           {/* Desktop CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <a 
-              href="https://wa.me/526642088413" 
+              href="https://wa.me/918105200448" 
               target="_blank" 
               rel="noreferrer"
               className="text-sm font-medium text-[#25D366] hover:opacity-80 transition-opacity"
@@ -91,17 +96,17 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
             </a>
             <button
               onClick={onOpenAppointmentModal}
-              className="liquid-glass rounded-full px-6 py-2.5 text-sm text-foreground hover:scale-[1.03] transition-transform duration-200 cursor-pointer shadow-md inline-flex items-center gap-2"
+              className="liquid-glass rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-200 cursor-pointer shadow-md inline-flex items-center gap-2"
             >
-              <Calendar size={14} className="opacity-80" />
-              Agendar Cita
+              <Calendar size={14} className="opacity-90" />
+              Book Appointment
             </button>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors cursor-pointer"
             aria-label="Toggle Navigation Menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -119,17 +124,17 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
           />
           
           {/* Content Menu */}
-          <div className="absolute top-[80px] left-0 w-full bg-secondary/95 border-b border-border py-8 px-6 flex flex-col gap-6 shadow-xl">
+          <div className="absolute top-[80px] left-0 w-full bg-white border-b border-border py-8 px-6 flex flex-col gap-6 shadow-xl">
             <nav className="flex flex-col gap-5">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-lg font-light transition-colors ${
+                  className={`text-lg font-medium transition-colors ${
                     isActive(link.path)
-                      ? 'text-foreground border-l-2 border-white pl-3'
-                      : 'text-muted-foreground hover:text-foreground pl-3'
+                      ? 'text-primary border-l-2 border-primary pl-3'
+                      : 'text-foreground hover:text-primary pl-3'
                   }`}
                 >
                   {link.name}
@@ -138,22 +143,22 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
             </nav>
             <div className="border-t border-border/40 pt-6 flex flex-col gap-3">
               <a 
-                href="https://wa.me/526642088413" 
+                href="https://wa.me/918105200448" 
                 target="_blank" 
                 rel="noreferrer"
                 className="w-full rounded-full bg-[#25D366] text-white text-center py-3.5 text-sm font-semibold hover:scale-[1.01] transition-transform duration-200 cursor-pointer"
               >
-                WhatsApp
+                WhatsApp Us
               </a>
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   onOpenAppointmentModal();
                 }}
-                className="w-full rounded-full bg-white text-black text-center py-3.5 text-sm font-semibold hover:scale-[1.01] transition-transform duration-200 cursor-pointer flex items-center justify-center gap-2"
+                className="w-full rounded-full bg-primary text-primary-foreground text-center py-3.5 text-black text-sm font-semibold hover:bg-primary/90 transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm"
               >
                 <Calendar size={14} />
-                Agendar Cita
+                Book Appointment
               </button>
             </div>
           </div>

@@ -96,7 +96,7 @@ export default function Navbar({ onOpenAppointmentModal }: NavbarProps) {
             </a>
             <button
               onClick={onOpenAppointmentModal}
-              className="liquid-glass rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-200 cursor-pointer shadow-md inline-flex items-center gap-2"
+              className="rounded-full px-6 py-2.5 text-sm font-semibold text-primary-foreground bg-primary hover:bg-primary/90 transition-all duration-200 cursor-pointer shadow-md inline-flex items-center gap-2"
             >
               <Calendar size={14} className="opacity-90" />
               Book Appointment
